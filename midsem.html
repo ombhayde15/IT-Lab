@@ -1,0 +1,118 @@
+<!-- <html>
+  <head>
+    <title>Practice</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+      table {
+        width: 300px;
+        /* border-collapse: collapse; */
+        margin: 20px auto;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: chartreuse;
+      }
+      img {
+        margin: 20px auto;
+        display: block;
+      }
+      #tabimg {
+        margin-right: 50%; /* Position off-screen to the right */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabimg">
+      <table>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <td>d1</td>
+          <td>d2</td>
+          <td>d3</td>
+        </tr>
+        <tr>
+          <td>d4</td>
+          <td>d5</td>
+          <td>d6</td>
+        </tr>
+        <tr>
+          <td>d7</td>
+          <td>d8</td>
+          <td>d9</td>
+        </tr>
+      </table>
+
+      <img
+        id="movingImage"
+        src="https://via.placeholder.com/300"
+        alt="Placeholder Image"
+      />
+    </div>
+    <button id="move">Move</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#move").click(function () {
+        $('#tabimg').animate({ "margin-right": "0" }, "slow")
+      });
+    });
+  </script>
+</html>  
+<!-- ---------------------------------------------- -->
+
+<!-- <html>
+  <head>
+    <title>Calci</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+      .calculator {
+        background-color: aqua;
+        margin: 20px auto;
+      }
+      .result{
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="number" id="num1" placeholder="Number 1" />
+      <input type="number" id="num2" placeholder="Number 2" />
+
+      <button onclick="add()">Addition</button>
+      <button onclick="subtract()">Subtraction</button>
+      <button onclick="divide()">Divide</button>
+      <button onclick="Multiply()">Multiply</button>
+      <div class="result" id="result"></div>
+    </div>
+    <script>
+      function add() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var result = num1 + num2;
+        document.getElementById("result").innerText = "Result" + result;
+      }
+      function subtract(){
+        var num1=  parseFloat(document.getElementById("num1").value)
+        var num2 = parseFloat(document.getElementById("num2").value)
+
+        var result = num1 - num2
+        document.getElementById("result").innerText = "Result" + result
+      }
+    </script>
+  </body>
+</html>
+
+<!-- ------------------------------------ -->
+
+

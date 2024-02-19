@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Product</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="brand">Select Brand:</label>
+      <select id="name">
+        <option value="Nokia">Nokia</option>
+        <option value="HP">HP</option>
+        <option value="Apple">Apple</option>
+        <option value="Samsung">Samsung</option>
+      </select>
+      <label for="type">Select Type</label>
+      <input type="checkbox" id="mobile" ,value="mobile" />
+      <label for="mobile">Mobile</label>
+      <input type="checkbox" id="laptop" value="Laptop" />
+      <label for="laptop">Laptop</label>
+      <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+
+    <button type="button" onclick="produceBill()">Produce Bill</button>
+    </form>
+    <script>
+    function produceBill() {
+        var brand = document.getElementById("brand").value;
+        var quantity = parseInt(document.getElementById("quantity").value);
+        var totalAmount = 0;
+    
+        if (isNaN(quantity) || quantity < 1) {
+            alert("Please enter a valid quantity.");
+            return;
+        }
+    
+        if (document.getElementById("mobile").checked) {
+            // Assuming mobile price is $100
+            totalAmount += 100 * quantity;
+        }
+    
+        if (document.getElementById("laptop").checked) {
+            // Assuming laptop price is $500
+            totalAmount += 500 * quantity;
+        }
+    
+        alert("Total Amount for " + quantity + " " + brand + " product(s): $" + totalAmount.toFixed(2));
+    }
+    </script>
+  </body>
+</html>
